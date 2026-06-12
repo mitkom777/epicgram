@@ -233,9 +233,13 @@ export default async function Home({
             </a>
           </Reveal>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
+          <div className="-mx-6 mt-14 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-4 [-ms-overflow-style:none] [scrollbar-width:none] md:mx-0 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:px-0 md:pb-0 [&::-webkit-scrollbar]:hidden">
             {t.films.items.map((f, i) => (
-              <Reveal key={f.title} delay={i * 100}>
+              <Reveal
+                key={f.title}
+                delay={i * 100}
+                className="w-[78%] shrink-0 snap-start sm:w-[46%] md:w-auto md:shrink"
+              >
                 <div className="group relative aspect-[3/4] cursor-pointer overflow-hidden rounded-2xl border border-white/10">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
