@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Epicgram — Генерирани изображения</title>
+<style>
+  body { background:#0a0a0b; color:#F3EFE6; font-family:system-ui,sans-serif; margin:0; padding:40px; }
+  h1 { font-size:28px; }
+  h2 { margin-top:48px; color:#F5B945; border-bottom:1px solid #2a2a31; padding-bottom:8px; }
+  .grid { display:grid; gap:20px; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); }
+  .card { background:#17171a; border:1px solid #2a2a31; border-radius:14px; overflow:hidden; }
+  .card img { width:100%; display:block; }
+  .card .label { padding:10px 14px; font-size:14px; }
+  .logos { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
+  .logos .card { text-align:center; }
+  .logos img { background:#101012; }
+</style>
+</head>
+<body>
+  <h1>🎬 Epicgram — генерирани изображения</h1>
+
+  <h2>Лого варианти</h2>
+  <div class="grid logos">
+    <div class="card"><img src="/logos/logo-laurel.png" alt="laurel"><div class="label">№1 · Лаврел (play в лавров венец)</div></div>
+    <div class="card"><img src="/logos/logo-hourglass.png" alt="hourglass"><div class="label">№2 · Пясъчен часовник</div></div>
+    <div class="card"><img src="/logos/logo-monogram.png" alt="monogram"><div class="label">№3 · Монограм E</div></div>
+  </div>
+
+  <h2>Hero визуал</h2>
+  <div class="grid">
+    <div class="card" style="grid-column:1/-1; max-width:720px"><img src="/hero.jpg" alt="hero"><div class="label">Падането на Константинопол</div></div>
+  </div>
+
+  <h2>Филмови постера</h2>
+  <div class="grid">
+    <div class="card"><img src="/films/thermopylae.jpg" alt="t"><div class="label">Термопилите</div></div>
+    <div class="card"><img src="/films/antwerp.jpg" alt="a"><div class="label">Обирът в Антверпен</div></div>
+    <div class="card"><img src="/films/nokia.jpg" alt="n"><div class="label">Nokia</div></div>
+  </div>
+
+  <h2>Категории</h2>
+  <div class="grid">
+    <div class="card"><img src="/categories/battles.jpg" alt=""><div class="label">Епични битки</div></div>
+    <div class="card"><img src="/categories/crime.jpg" alt=""><div class="label">Криминални загадки</div></div>
+    <div class="card"><img src="/categories/heists.jpg" alt=""><div class="label">Обири на века</div></div>
+    <div class="card"><img src="/categories/companies.jpg" alt=""><div class="label">Възходът на компании</div></div>
+    <div class="card"><img src="/categories/failures.jpg" alt=""><div class="label">Големите провали</div></div>
+    <div class="card"><img src="/categories/civilizations.jpg" alt=""><div class="label">Изгубени цивилизации</div></div>
+    <div class="card"><img src="/categories/figures.jpg" alt=""><div class="label">Легендарни личности</div></div>
+    <div class="card"><img src="/categories/spies.jpg" alt=""><div class="label">Шпиони и тайни операции</div></div>
+    <div class="card"><img src="/categories/expeditions.jpg" alt=""><div class="label">Велики експедиции</div></div>
+    <div class="card"><img src="/categories/disasters.jpg" alt=""><div class="label">Катастрофи и бедствия</div></div>
+  </div>
+</body>
+</html>
