@@ -4,7 +4,7 @@ const en: Dictionary = {
   meta: {
     title: "Epicgram — History, brought to life on screen",
     description:
-      "Epicgram turns the most gripping stories from the past into short films — epic battles, criminal mysteries and the rise of legendary companies.",
+      "Epicgram turns history's most gripping stories into short films — battles, mysteries, empires and the people who shaped the world.",
   },
   nav: {
     how: "How it works",
@@ -19,7 +19,7 @@ const en: Dictionary = {
     titleLine1: "History,",
     titleLine2: "brought to life on screen",
     subtitle:
-      "Epicgram turns the most gripping stories from the past into short films — epic battles, criminal mysteries and the rise of legendary companies. All in one place.",
+      "Epicgram turns history's most gripping stories into short films — battles, mysteries, empires and the people who shaped the world. All in one place.",
     rating: "4.8 ★ · 10,000+ downloads",
     note: "Free with ads · Premium ad-free",
     featuredTag: "Featured",
