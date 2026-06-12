@@ -39,22 +39,32 @@ export default async function Home({
       <Nav dict={t.nav} lang={lang} />
 
       {/* HERO */}
-      <section className="relative overflow-hidden pb-24 pt-28 md:pt-48">
-        <div className="pointer-events-none absolute inset-0 -z-10">
-          <div className="absolute left-1/2 top-0 h-[600px] w-[900px] -translate-x-1/2 rounded-full bg-gold-500/10 blur-[120px]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,rgba(245,185,69,0.08),transparent_60%)]" />
+      <section className="relative flex min-h-[100svh] items-center overflow-hidden">
+        {/* Full-bleed background image */}
+        <div className="absolute inset-0 -z-10">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/hero.jpg"
+            alt=""
+            aria-hidden="true"
+            className="h-full w-full animate-slow-zoom object-cover"
+          />
+          {/* Legibility + brand overlays */}
+          <div className="absolute inset-0 bg-ink-950/55" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/40 to-ink-950/70" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,transparent,rgba(10,10,11,0.5))]" />
         </div>
 
-        <div className="mx-auto max-w-4xl px-6 text-center">
+        <div className="mx-auto w-full max-w-4xl px-6 py-32 text-center md:py-40">
           <Reveal>
-            <span className="inline-flex items-center gap-2 rounded-full border border-gold-500/30 bg-gold-500/5 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-gold-300">
+            <span className="inline-flex items-center gap-2 rounded-full border border-gold-500/30 bg-ink-950/40 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-gold-300 backdrop-blur">
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-gold-400" />
               {t.hero.badge}
             </span>
           </Reveal>
 
           <Reveal delay={100}>
-            <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-cream sm:text-5xl md:mt-8 md:text-7xl">
+            <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-cream drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)] sm:text-5xl md:mt-8 md:text-7xl">
               {t.hero.titleLine1}
               <br />
               <span className="text-gradient-gold">{t.hero.titleLine2}</span>
@@ -62,7 +72,7 @@ export default async function Home({
           </Reveal>
 
           <Reveal delay={200}>
-            <p className="mx-auto mt-7 max-w-2xl text-lg text-cream/70 md:text-xl">
+            <p className="mx-auto mt-7 max-w-2xl text-lg text-cream/80 drop-shadow-[0_1px_10px_rgba(0,0,0,0.5)] md:text-xl">
               {t.hero.subtitle}
             </p>
           </Reveal>
@@ -76,42 +86,10 @@ export default async function Home({
               <p className="text-sm font-medium text-gold-300">
                 {t.hero.rating}
               </p>
-              <p className="text-sm text-cream/40">{t.hero.note}</p>
+              <p className="text-sm text-cream/60">{t.hero.note}</p>
             </div>
           </Reveal>
         </div>
-
-        <Reveal delay={500} className="mx-auto mt-20 max-w-5xl px-6">
-          <div className="relative aspect-video overflow-hidden rounded-2xl border border-white/10 bg-ink-800 shadow-2xl">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/hero.jpg"
-              alt={t.hero.featuredTitle}
-              className="absolute inset-0 h-full w-full animate-slow-zoom object-cover"
-            />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent,rgba(0,0,0,0.6))]" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gold-500/90 shadow-[0_0_40px_rgba(245,185,69,0.6)] transition-transform hover:scale-110">
-                <svg width="26" height="26" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 2.5L13 8L3 13.5V2.5Z" fill="#0a0a0b" />
-                </svg>
-              </span>
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between bg-gradient-to-t from-ink-950 to-transparent p-6">
-              <div className="text-left">
-                <p className="text-xs font-medium uppercase tracking-widest text-gold-300">
-                  {t.hero.featuredTag}
-                </p>
-                <p className="mt-1 font-display text-xl font-bold text-cream">
-                  {t.hero.featuredTitle}
-                </p>
-              </div>
-              <span className="rounded-full bg-black/40 px-3 py-1 text-xs text-cream/80 backdrop-blur">
-                {t.hero.featuredDuration}
-              </span>
-            </div>
-          </div>
-        </Reveal>
       </section>
 
       {/* CATEGORIES */}
